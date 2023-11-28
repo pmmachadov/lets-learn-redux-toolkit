@@ -4,7 +4,7 @@ import { apiSlice } from '../features/dogs/dogs-api-slice';
 
 export const store = configureStore({
   reducer: {
-    counter: counterReducer,
+    counter: counterReducer, // It automatically calls combineReducers, so we can pass an object
     [apiSlice.reducerPath]: apiSlice.reducer,
   },
   middleware: (getDefaultMiddleware) => {
